@@ -7,6 +7,8 @@ import (
 	"github.com/joho/godotenv"
 )
 
+// The main function loads environment variables, makes a web request using credentials, and logs the
+// result to a file.
 func main() {
 	err := godotenv.Load()
 	if err != nil {

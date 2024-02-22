@@ -9,6 +9,8 @@ import (
 	"github.com/sclevine/agouti"
 )
 
+// The function PunchTheClock automates logging into a web page and retrieves the result along with the
+// current date and time.
 func PunchTheClock(url, user, password string) string {
 	pageResult := ""
 
