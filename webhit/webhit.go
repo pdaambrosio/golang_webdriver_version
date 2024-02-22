@@ -13,21 +13,24 @@ func PunchTheClock(url, user, password string) string {
 	pageResult := ""
 
 	driver := agouti.ChromeDriver(
-		agouti.ChromeOptions("args", []string{"--no-sandbox", "--disable-dev-shm-usage"}),
+		agouti.ChromeOptions("args", []string{"--headless", "--no-sandbox", "--disable-dev-shm-usage"}),
 	)
 
 	err := driver.Start()
 	if err != nil {
-		log.Fatal("Failed to start driver: %s", err)
+		log.Println("Error starting the driver")
+		panic(err)
 	}
 
 	page, err := driver.NewPage()
 	if err != nil {
+		log.Println("Error opening the page: ", url)
 		panic(err)
 	}
 
 	err = page.Navigate(url)
 	if err != nil {
+		log.Println("Error navigating to the URL: ", url)
 		panic(err)
 	}
 
