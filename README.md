@@ -9,6 +9,8 @@ This is a simple go program to demosntrate how to use the selenium webdriver, na
 
 ## Installation
 
+First you need clone the repository.
+
 You can install the "chromedriver" with the following command:
 
 For Linux:
@@ -25,10 +27,11 @@ choco install chromedriver
 
 You don't use the "choco" package manager, you can download the "chromedriver" from the following link:
 
-[https://sites.google.com/a/chromium.org/chromedriver/downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads)
+[https://chromedriver.chromium.org/downloads](https://chromedriver.chromium.org/downloads)
 
 You can install the "agouti" package with the following command:
-NOTE: If you build the program the agouti package will be included in the binary file.
+
+But, if you build the program (create a binary), you don't need to install the "agouti" package, because I used the "go mod" to manage the dependencies of the project.
 
 ```bash
 go get github.com/sclevine/agouti
@@ -55,7 +58,7 @@ You can run the program with:
 go run main.go
 ```
 
-But I recommend to build the program with the following command:
+But, I recommend to build the program with the following command:
 
 For Linux:
 
