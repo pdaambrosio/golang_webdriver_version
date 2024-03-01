@@ -44,9 +44,9 @@ You need create a ".env" file with the following variables:
 ```bash
 tee -a .env <<EOF
 # .env
-WEB_USERN=your_username
-WEB_PASSWORD=your_password
-WEB_URL=https://your_url.com
+WEB_USERN="your_username"
+WEB_PASSWORD="your_password"
+WEB_URL="https://your_url.com"
 EOF
 ```
 
