@@ -16,7 +16,7 @@ func main() {
 		panic(err)
 	}
 
-	url := "https://url.com"
+	url := os.Getenv("WEB_URL")
 	user := os.Getenv("WEB_USER")
 	password := os.Getenv("WEB_PASSWORD")
 
